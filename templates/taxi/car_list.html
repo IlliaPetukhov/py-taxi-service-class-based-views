@@ -7,7 +7,9 @@
         <title>YOUR Car LIST IS EMPTY</title>
     {% endif %}
     {% for car in car_list %}
-        <li>{{ car.model }}</li>
+        <li>
+            <a href={% url "taxi:car_detail" car.id %}>{{ car.model }} </a>
+        </li>
     {% endfor %}
     </ul>
 {% endblock %}
